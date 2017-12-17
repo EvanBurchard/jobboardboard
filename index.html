@@ -63,97 +63,353 @@
       }
       a{
         margin-top:9px;
-        text-decoration:none;
         color:black;
-      }
-      a:visited{
-        color:#a8b2cf;
       }
       .wrapper{
         margin: 18px;
       }
+
+
+      .board-tech-filter{
+        padding-left: 10px;
+      }
+
+      .board-category-filter{
+        cursor:pointer;
+        display: inline;
+        padding: 10px;
+        line-height: 50px;
+        border-radius: 20px;
+        white-space: pre;
+      }
+      .board-category-filter.location{
+        border: 2px solid red;
+      }
+      .board-category-filter.technology{
+        border: 2px solid black;
+      }
+      .board-category-filter.tech-areas{
+        border: 2px solid lightgreen;
+      }
+      .board-category-filter.diversity{
+        border: 2px solid blue;
+      }
+      .board-category-filter.structure{
+        border: 2px solid lightblue;
+      }
+
+      .board-category-filter.location.clicked{
+        color:white;
+        background-color: red;
+      }
+      .board-category-filter.technology.clicked{
+        background-color: black;
+        color:white;
+      }
+      .board-category-filter.tech-areas.clicked{
+        background-color: lightgreen;
+      }
+      .board-category-filter.diversity.clicked{
+        background-color: blue;
+        color:white;
+      }
+      .board-category-filter.structure.clicked{
+        background-color: lightblue;
+      }
+
     </style>
   </head>
   <body>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+
     <div class='header'>
       <div style="background:url('pika.png'); background-repeat: no-repeat; background-position:center; background-size: 60px;">
         <h1>Job Board Board</h1>
       </div>
     </div>
-    <div class='wrapper'>
-      <div class='group'>
-        <fieldset>
-         <legend>Tech</legend>
-          <ul>
-            <li><a target='_blank' href='http://stackoverflow.com/jobs'>Stack Overflow Jobs</a></li>
-            <li><a target='_blank' href='http://jobs.github.com/'>Github Jobs</a></li>
-            <li><a target='_blank' href='http://www.dice.com/'>Dice</a></li>
-            <li><a target='_blank' href='http://www.cybercoders.com'>Cyber Coders</a></li>
-            <li><a target='_blank' href='http://www.pocitjobs.com/'>People of Color in Tech</a></li>
-            <li><a target='_blank' href='http://www.sensationaljobs.com/'>Sensational Jobs</a></li>
-            <li><a target='_blank' href='http://authenticjobs.com/'>Authentic Jobs</a></li>
-            <li><a target='_blank' href='http://breakoutlist.com/'>Break out list</a></li>
-            <li><a target='_blank' href='http://www.krop.com/'>Krop</a></li>
-            <li><a target='_blank' href='http://panda.jobs/'>Panda Jobs</a></li>
-            <li><a target='_blank' href='http://jobs.smashingmagazine.com/'>Smashing Jobs</a></li>
-            <li><a target='_blank' href='http://functionaljobs.com/'>Functional Jobs</a></li>
-          </ul>
-        </fieldset>
-        <fieldset>
-         <legend>Design</legend>
-         <ul>
-            <li><a target='_blank' href='http://designgigsforgood.squarespace.com/'>Design Gigs For Good</a></li>
-            <li><a target='_blank' href='http://www.behance.net/joblist'>Behance Jobs</a></li>
-            <li><a target='_blank' href='http://designjobs.aiga.org'>AIGA design jobs</a></li>
-            <li><a target='_blank' href='http://dribbble.com/jobs'>Dribbble Jobs</a></li>
-            <li><a target='_blank' href='http://www.coroflot.com/design-jobs'>Coroflot</a></li>
-          </ul>
-        </fieldset>
-      </div>
-      <div class='group'>
-        <fieldset>
-        <legend>Flexible/Remote/Abroad</legend>
-        <ul>
-          <li><a target='_blank' href='http://www.flexjobs.com'>Flex Jobs</a></li>
-          <li><a target='_blank' href='http://www.jobspresso.co'>Jobspresso</a></li>
-          <li><a target='_blank' href='http://www.remoteok.io'>Remote OK</a></li>
-          <li><a target='_blank' href='http://www.weworkremotely.com'>We Work Remotely</a></li>
-          <li><a target='_blank' href='http://www.wfh.io'>WFH.io</a></li>
-          <li><a target='_blank' href='http://www.workingnomads.co'>Working Nomads</a></li>
-          <li><a target='_blank' href='http://techmeabroad.com/'>Tech Me Abroad</a></li>
-          <li><a target='_blank' href='http://jobs.goabroad.com/'>Jobs Abroad</a></li>
-        </ul>
-        </fieldset>
-        <fieldset>
-        <legend>General</legend>
-        <ul>
-          <li><a target='_blank' href='http://www.indeed.com/'>Indeed</a></li>
-          <li><a target='_blank' href='http://www.linkup.com/'>Link Up</a></li>
-          <li><a target='_blank' href='http://jobcompass.net/'>Job Compass</a></li>
-          <li><a target='_blank' href='http://careerbuilder.com/'>Career Builder</a></li>
-          <li><a target='_blank' href='http://www.simplyhired.com/'>Simply Hired</a></li>
-          <li><a target='_blank' href='http://www.monster.com/'>Monster</a></li>
-          <li><a target='_blank' href='http://www.jobaware.com/jobs'>Job Aware</a></li>
-        </ul>
-        </fieldset>
-      </div>
-      <div>
-        <h2>Other Good Resources</h2>
-        <ul>
-          <li><a target='_blank' href='http://www.glassdoor.com/index.htm'>Glass Door</a></li>
-          <li><a target='_blank' href='http://salary.com'>Salary.com</a></li>
-          <li><a target='_blank' href='http://www.hiretechladies.com/'>Tech Ladies</a></li>
-          <li><a target='_blank' href='http://woo.io'>Woo</a></li>
-          <li><a target='_blank' href='http://interviewcake.com'>Interview Cake</a></li>
-          <li><a target='_blank' href='http://diversitylist.co/'>Diversity List</a></li>
-        </ul>
-      </div>
-    </div>
+
     <div class="surfooter">
-      Have another resource you want to share? Please <a href="http://evanburchard.com/contact">let me know</a> or submit to the project on <a href="http://github.com/EvanBurchard/jobboardboard">GitHub</a>!
+      Have a board that you'd like to be added? Please <a href="http://evanburchard.com/contact">let me know</a> or submit to the project on <a href="http://github.com/EvanBurchard/jobboardboard">GitHub</a>!
     </div>
-    <div class="footer">
-      With Love from <a href="http://evanburchard.com">Evan</a>, 2017
+    <hr>
+    <div class='wrapper'>
+      <div>
+        <div>
+          <div class='board-section'>
+            <div class='category-filters'>
+              <div class='board-category-filter location' data-toggle='Abroad'>Abroad</div>
+              <div class='board-category-filter technology' data-toggle='Angular'>Angular</div>
+              <div class='board-category-filter structure' data-toggle='Bcorp'>B Corp</div>
+              <div class='board-category-filter technology' data-toggle='Bots'>Chat Bots</div>
+              <div class='board-category-filter technology' data-toggle='Cryptocurrency'>Cryptocurrency</div>
+              <div class='board-category-filter tech-areas' data-toggle='Data'>Data</div>
+              <div class='board-category-filter tech-areas' data-toggle='Design'>Design</div>
+              <div class='board-category-filter technology' data-toggle='Drupal'>Drupal</div>
+              <div class='board-category-filter technology' data-toggle='Elixir'>Elixir</div>
+              <div class='board-category-filter technology' data-toggle='Ember'>Ember</div>
+              <div class='board-category-filter location' data-toggle='Europe'>Europe</div>
+              <div class='board-category-filter structure' data-toggle='Flexible'>Flexible Jobs</div>
+              <div class='board-category-filter tech-areas' data-toggle='FOSS'>FOSS</div>
+              <div class='board-category-filter technology' data-toggle='Functional'>Functional Programming</div>
+              <div class='board-category-filter technology' data-toggle='Go'>Go</div>
+              <div class='board-category-filter structure' data-toggle='Growth'>High Growth</div>
+              <div class='board-category-filter structure' data-toggle='Internships'>Internships</div>
+              <div class='board-category-filter technology' data-toggle='Laravel'>Laravel</div>
+              <div class='board-category-filter technology' data-toggle='Mac'>Mac</div>
+              <div class='board-category-filter technology' data-toggle='Meteor'>Meteor</div>
+              <div class='board-category-filter technology' data-toggle='MR'>MR/VR/AR</div>
+              <div class='board-category-filter structure' data-toggle='Nonprofits'>Nonprofits</div>
+              <div class='board-category-filter technology' data-toggle='Perl'>Perl</div>
+              <div class='board-category-filter technology' data-toggle='Postgres'>Postgres</div>
+              <div class='board-category-filter technology' data-toggle='Python'>Python</div>
+              <div class='board-category-filter technology' data-toggle='R'>R and Stats</div>
+              <div class='board-category-filter location' data-toggle='Remote'>Remote</div>
+              <div class='board-category-filter technology' data-toggle='Ruby'>Ruby</div>
+              <div class='board-category-filter technology' data-toggle='Scala'>Scala</div>
+              <div class='board-category-filter diversity' data-toggle='URM'>URM</div>
+              <div class='board-category-filter diversity' data-toggle='Women'>Women</div>
+              <div class='board-category-filter technology' data-toggle='Wordpress'>Wordpress</div>
+              <hr>
+              <div class='board-category-filter technology' data-toggle='Tech'>General Tech Industry</div>
+              <div class='board-category-filter technology' data-toggle='General'>Not Tech Specific</div>
+            </div>
+            <ul>
+              <li data-tech-only="true" class="Abroad" style="display:none">
+                <a target="_blank" href="https://techmeabroad.com/">Tech Me Abroad</a>
+              </li>
+              <li data-tech-only="true" class="Angular" style="display:none">
+                <a target="_blank" href="http://www.weloveangular.com/">We Love Angular</a>
+              </li>
+              <li data-tech-only="false" class="Bcorp" style="display:none">
+                <a target="_blank" href="https://www.bwork.com/">B Work</a>
+              </li>
+              <li data-tech-only="false" class="Bcorp" style="display:none">
+                <a target="_blank" href="http://www.bcorporation.net/b-corp-jobs-board">B Corps Job Board</a>
+              </li>
+              <li data-tech-only="true" class="Bots" style="display:none">
+                <a target="_blank" href="https://botjobs.io/">BotJobs</a>
+              </li>
+              <li data-tech-only="true" class="Cryptocurrency" style="display:none">
+                <a target="_blank" href="https://beincrypto.com/">Be In Crypto</a>
+              </li>
+              <li data-tech-only="true" class="Cryptocurrency" style="display:none">
+                <a target="_blank" href="https://crypto.jobs/">Cryptocurrency Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Data" style="display:none">
+                <a target="_blank" href="https://icrunchdata.com/jobs/">Icrunchdata</a>
+              </li>
+              <li data-tech-only="true" class="Data" style="display:none">
+                <a target="_blank" href="https://www.kaggle.com/jobs">kaggle jobs</a>
+              </li>
+              <li data-tech-only="true" class="Design" style="display:none">
+                <a target="_blank" href="https://www.krop.com/">Krop</a>
+              </li>
+              <li data-tech-only="true" class="Design" style="display:none">
+                <a target="_blank" href="http://designjobs.aiga.org">AIGA design jobs</a>
+              </li>
+              <li data-tech-only="true" class="Design" style="display:none">
+                <a target="_blank" href="https://www.behance.net/joblist">Behance Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Design" style="display:none">
+                <a target="_blank" href="https://dribbble.com/jobs">Dribbble Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Drupal" style="display:none">
+                <a target="_blank" href="https://jobs.drupal.org/">Drupal Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Elixir" style="display:none">
+                <a target="_blank" href="http://jobs.elixirdose.com/">ElixirDose Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Ember" style="display:none">
+                <a target="_blank" href="http://jobs.emberjs.com/">Ember Job Board</a>
+              </li>
+              <li data-tech-only="true" class="Europe" style="display:none">
+                <a target="_blank" href="http://europeremotely.com/">Europe Remotely</a>
+              </li>
+              <li data-tech-only="true" class="Europe" style="display:none">
+                <a target="_blank" href="http://landing.jobs">Landing.jobs</a>
+              </li>
+              <li data-tech-only="true" class="FOSS" style="display:none">
+                <a target="_blank" href="https://www.fossjobs.net/">Foss Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Functional" style="display:none">
+                <a target="_blank" href="https://functionaljobs.com/">Functional Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Go" style="display:none">
+                <a target="_blank" href="http://www.golangprojects.com/">Golang</a>
+              </li>
+              <li data-tech-only="true" class="Go" style="display:none">
+                <a target="_blank" href="http://www.welovegolang.com/">We Love Golang</a>
+              </li>
+              <li data-tech-only="true" class="Growth" style="display:none">
+                <a target="_blank" href="https://angel.co/job-collections/breakout-companies">AngelList Breakout</a>
+              </li>
+              <li data-tech-only="true" class="Growth" style="display:none">
+                <a target="_blank" href="https://breakoutlist.com/">Break out list</a>
+              </li>
+              <li data-tech-only="true" class="Internships" style="display:none">
+                <a target="_blank" href="https://angel.co/job-collections/startup-internships">Anglelist Internships</a>
+              </li>
+              <li data-tech-only="true" class="Internships" style="display:none">
+                <a target="_blank" href="http://www.intern.supply/">Intern Supply</a>
+              </li>
+              <li data-tech-only="true" class="Laravel" style="display:none">
+                <a target="_blank" href="https://larajobs.com/">LaraJobs</a>
+              </li>
+              <li data-tech-only="true" class="Mac" style="display:none">
+                <a target="_blank" href="http://jobs.coreint.org/">Core Intuition Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Meteor" style="display:none">
+                <a target="_blank" href="https://www.weworkmeteor.com/">We Work Meteor</a>
+              </li>
+              <li data-tech-only="true" class="MR" style="display:none">
+                <a target="_blank" href="https://www.mixedrealityjobs.co/">Mixed Reality Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Perl" style="display:none">
+                <a target="_blank" href="https://jobs.perl.org/">Perl Job Site</a>
+              </li>
+              <li data-tech-only="true" class="Postgres" style="display:none">
+                <a target="_blank" href="https://www.postgresql.org/list/pgsql-jobs/">PostgreSQL</a>
+              </li>
+              <li data-tech-only="true" class="Python" style="display:none">
+                <a target="_blank" href="https://www.python.org/jobs/">Python Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Python" style="display:none">
+                <a target="_blank" href="https://www.remotepython.com/jobs/">Remote Python</a>
+              </li>
+              <li data-tech-only="true" class="R" style="display:none">
+                <a target="_blank" href="https://www.r-users.com/">Jobs for R-Users</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="https://angel.co/job-collections/remote">AngelList Remote</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://wfh.io">WFH.io</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="https://nodesk.co/remote-companies/">NODESK</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://jobspresso.co">Jobspresso</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://remoteok.io">Remote OK</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://remote.co">remote.co</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="https://www.remotelyawesomejobs.com/">Remotely Awesome Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="https://remotive.io/find-a-job/">Remotive</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://weworkremotely.com">We Work Remotely</a>
+              </li>
+              <li data-tech-only="true" class="Remote" style="display:none">
+                <a target="_blank" href="http://workingnomads.co">Working Nomads</a>
+              </li>
+              <li data-tech-only="true" class="Scala" style="display:none">
+                <a target="_blank" href="http://underscore.io/jobs/">Underscore Job Board</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.dice.com/">Dice</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://authenticjobs.com/">Authentic Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.cybercoders.com">Cyber Coders</a>
+              </li>
+              <li data-tech-only="true" class="URM" style="display:none">
+                <a target="_blank" href="https://www.pocitjobs.com/">People of Color in Tech</a>
+              </li>
+              <li data-tech-only="true" class="Women" style="display:none">
+                <a target="_blank" href="https://angel.co/job-collections/female-founders">AngelList Female Founder</a>
+              </li>
+              <li data-tech-only="true" class="Women" style="display:none">
+                <a target="_blank" href="http://hireher.co/">HireHer</a>
+              </li>
+              <li data-tech-only="true" class="Wordpress" style="display:none">
+                <a target="_blank" href="http://www.wphired.com/">WPhired</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://betalist.com/jobs">BetaList Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.crunchboard.com/">CrunchBoard</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.f6s.com/jobs">F6S</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://jobs.github.com/positions">Github Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="http://hnhiring.me/">HN - Who is Hiring?</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.keyvalues.com">Key Values</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="http://panda.jobs/">Panda Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="http://jobs.smashingmagazine.com/">Smashing Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://stackoverflow.com/jobs">Stack Overflow Jobs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://www.startus.cc/jobs">StartUs</a>
+              </li>
+              <li data-tech-only="true" class="Tech" style="display:none">
+                <a target="_blank" href="https://news.ycombinator.com/jobs">YCOM Jobs</a>
+              </li>
+              <li data-tech-only="false" class="Abroad" style="display:none">
+                <a target="_blank" href="https://jobs.goabroad.com/">Jobs Abroad</a>
+              </li>
+              <li data-tech-only="false" class="Flexible Jobs" style="display:none">
+                <a target="_blank" href="https://www.flexjobs.com">Flex Jobs</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="http://careerbuilder.com/">Career Builder</a>
+              </li>
+              <li data-tech-only="false" class="Nonprofits" style="display:none">
+                <a target="_blank" href="https://www.idealist.org/">Idealist</a>
+              </li>
+              <li data-tech-only="false" class="Nonprofits" style="display:none">
+                <a target="_blank" href="https://www.nten.org/jobs/">NTEN</a>
+              </li>
+              <li data-tech-only="false" class="URM" style="display:none">
+                <a target="_blank" href="https://www.jopwell.com/jobs/all">Jopwell</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="https://www.indeed.com/">Indeed</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="https://jobcompass.net/">Job Compass</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="https://www.monster.com/">Monster</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="https://www.sensationaljobs.com/">Sensational Jobs</a>
+              </li>
+              <li data-tech-only="false" class="General" style="display:none">
+                <a target="_blank" href="https://www.simplyhired.com/">Simply Hired</a>
+              </li>
+              <li data-tech-only="true" class="Ruby" style="display:none">
+                <a target="_blank" href="https://railsjob.com/">Rails Job</a>
+              </li>
+              <li data-tech-only="true" class="Ruby" style="display:none">
+                <a target="_blank" href="https://jobs.rubynow.com/">Ruby Now</a>
+              </li>
+          </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
